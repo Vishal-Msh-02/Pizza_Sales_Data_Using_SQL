@@ -1,24 +1,26 @@
 🍕 Pizza Sales Data Analysis with SQL
-📊 Project Overview
-This project involves analyzing pizza sales data using MySQL to uncover valuable business insights such as total revenue, top-selling pizzas, order patterns, and revenue trends over time.
 
-The dataset consists of multiple tables that store information about pizza types, prices, orders, and order details. The goal is to write optimized SQL queries that answer real-world business questions from basic summaries to advanced analytics.
+
+📊 Project Overview
+This project showcases a comprehensive analysis of pizza sales using MySQL 8.0, aimed at extracting valuable business insights. Through structured SQL queries, we explore revenue patterns, best-selling pizzas, customer ordering behavior, and category-wise performance — from basic summaries to advanced analytics.
+
+The dataset includes four relational tables containing details about pizza types, prices, orders, and quantities sold. The objective is to answer business questions using optimized and modular SQL queries.
 
 🧰 Tools & Technologies
 Database: MySQL 8.0
 
 Query Language: SQL
 
-Data Source: Simulated Pizza Sales Dataset (tables: orders, orders_details, pizzas, pizza_types)
-
 Platform: MySQL Workbench
+
+Data Source: Simulated Pizza Sales Dataset (orders, orders_details, pizzas, pizza_types)
 
 🗃️ Dataset Tables
 Table Name	Description
-orders	Contains order IDs and order timestamps
-orders_details	Contains order-level details like quantity and pizza ID
-pizzas	Contains pizza price and size
-pizza_types	Contains pizza names and categories
+orders	Contains order IDs and timestamps
+orders_details	Contains order-level details such as quantity and pizza ID
+pizzas	Includes pizza sizes and prices
+pizza_types	Lists pizza names and their categories
 
 📌 Business Questions & SQL Analysis
 🔹 Basic Queries
@@ -51,33 +53,36 @@ pizza_types	Contains pizza names and categories
 ✅ Top 3 pizzas by revenue in each category
 
 📈 Key Insights
-💰 The business generated a total revenue of $817,860.50
+💰 Total Revenue: $817,860.50
 
-🍕 The most ordered pizza size is Large
+🍕 Most Ordered Size: Large
 
-🏆 Pepperoni Classic is the highest-grossing pizza
+🏆 Top-Earning Pizza: Pepperoni Classic
 
-⏰ Most orders are placed around 7 PM
+⏰ Peak Order Time: Around 7 PM
 
-📊 Revenue shows a consistent upward trend over time
+📊 Trend: Revenue shows a consistent upward trend
 
-🥇 Category-wise leaders show Classic and Veggie pizzas dominate the top spots
+🥇 Category Leaders: Classic and Veggie pizzas dominate top positions
 
 🧠 What I Learned
-Writing efficient JOINs to combine multiple tables
+Writing efficient JOIN statements across multiple tables
 
-Using window functions like ROW_NUMBER() and RANK() for advanced analytics
+Using window functions like ROW_NUMBER() and RANK() for advanced ranking
 
-Creating CTEs (WITH statements) for modular queries
+Building modular queries with CTEs (WITH clauses)
 
-Formatting and rounding numbers with ROUND() and FORMAT()
+Formatting output using ROUND() and FORMAT()
 
-Real-world business thinking applied to raw SQL
+Translating real-world business questions into SQL logic
 
 📂 Folder Structure
+pgsql
+Copy
+Edit
 📦 pizza-sales-sql-analysis/
-├── 📄 README.md
-├── 📁 SQL_Scripts/
+├── README.md
+├── SQL_Scripts/
 │   ├── retrieve_total_orders.sql
 │   ├── total_revenue.sql
 │   ├── highest_priced_pizza.sql
@@ -90,16 +95,22 @@ Real-world business thinking applied to raw SQL
 │   ├── top_3_pizzas_by_revenue.sql
 │   ├── revenue_percentage_by_pizza.sql
 │   ├── cumulative_revenue.sql
-└── ----top_3_per_category.sql
+│   └── top_3_per_category.sql
+Each SQL file corresponds to a specific business question, making the project modular and easy to navigate.
 
 🚀 How to Run
-Import the database into your MySQL server.
+Install MySQL 8.0+ and a client like MySQL Workbench.
 
-Open and run the SQL queries provided inside /SQL Queries/.
+Create a new database (e.g., pizza_sales).
 
-Adjust queries if table names differ.
+Import CSV files (orders.csv, orders_details.csv, pizzas.csv, pizza_types.csv) using the MySQL import wizard.
 
-Optional: Connect to Power BI or Tableau for visualization.
+Open the .sql files in the SQL_Scripts folder.
+
+Run the queries one by one to view the insights.
+
+(Optional) Connect to Power BI or Tableau for data visualization.
 
 📬 Feedback & Contributions
-Have suggestions or want to contribute new queries or visualizations? Feel free to fork this repo and open a pull request!
+Have suggestions, improvements, or want to add new queries or visualizations?
+Feel free to fork this repository and submit a pull request!
